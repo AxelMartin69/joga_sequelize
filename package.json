@@ -1,0 +1,24 @@
+{
+  "name": "joga_sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelMartin69/joga_sequelize.git"
+  },
+  "author": "Axel-Martin Tammekand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AxelMartin69/joga_sequelize/issues"
+  },
+  "homepage": "https://github.com/AxelMartin69/joga_sequelize#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1"
+  }
+}
