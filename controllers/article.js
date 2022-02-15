@@ -22,7 +22,14 @@ const getArticleBySlug = (req, res) => {
     Article.findOne({
         where: {
             slug : req.params.slug
-        }
+        },
+        include: [
+            {
+                model: Author,
+                attributes: ["id", "name"],
+                on: { id: Sequelize.col('Article.author_id') }
+            }
+        ]
     })
     .then(article => {
         console.log(article);

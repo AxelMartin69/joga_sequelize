@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
   Article.init({
     id: {
       type: DataTypes.INTEGER,
@@ -46,5 +47,10 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Article',
   });
+
+Article.associate = function (models) {
+  Article.hasOne(models.Author)
+}
+
   return Article;
 };
