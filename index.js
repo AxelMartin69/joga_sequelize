@@ -1,4 +1,5 @@
-const express = require("express")
+const express = require("express");
+const { getAllArticles } = require("./controllers/article");
 const app = express()
 const port = 3000
 
@@ -21,10 +22,10 @@ sequelize
         console.log('Unable to connect to database:', err);
     })
 
-// simple route
-app.get('/', (req, res)  => {
-    res.json({ message: 'Welcome to sequelize application'})
-});
+// using routes and controllers
+const articleRouter = require('./routes/article')
+app.use('/', articleRouter)
+
 
 // listen requests
 app.listen(port, () => {
